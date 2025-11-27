@@ -38,6 +38,23 @@
     <!-- Core Style Css -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Custom Styles for Mobile Background -->
+    <style>
+        @media (max-width: 300px) {
+            header.freelancer.bg-img[data-background="media/bg3.png"],
+            header.freelancer.bg-img {
+                background-position: right center !important;
+                background-size: cover !important;
+            }
+        }
+        /* Keep default for larger screens */
+        @media (min-width: 992px) {
+            header.freelancer.bg-img {
+                background-position: center center;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
