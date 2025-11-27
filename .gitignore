@@ -1,0 +1,19 @@
+# Large video files
+media/VIDEO/*.mp4
+media/VIDEO/*.MP4
+
+# Large image files
+media/EXTERIOR/OP 1  5-2-22.jpg
+media/VIDEO/interior.mp4
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
