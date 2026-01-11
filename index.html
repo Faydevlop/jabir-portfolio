@@ -100,13 +100,12 @@
                 color: #75dab4;
             }
         }
-        /* Hide cursor effect on mobile screens */
-        @media (max-width: 991px) {
-            .mouse-cursor,
-            .cursor-outer,
-            .cursor-inner {
-                display: none !important;
-            }
+        /* Hide cursor effect on all screens */
+        .mouse-cursor,
+        .cursor-outer,
+        .cursor-inner {
+            display: none !important;
+            visibility: hidden !important;
         }
         /* Keep default for larger screens */
         @media (min-width: 992px) {

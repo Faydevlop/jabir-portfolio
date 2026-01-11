@@ -700,13 +700,35 @@ $(document).ready(function () {
     $(window).scroll(updateProgress);
     var offset = 150;
     var duration = 550;
-    jQuery(window).on('scroll', function () {
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.progress-wrap').addClass('active-progress');
+    
+    // Hide progress button until preloader is done
+    jQuery('.progress-wrap').removeClass('active-progress');
+    
+    // Function to handle scroll and show/hide progress button
+    var handleProgressButton = function() {
+        // Only show progress button if preloader is done
+        if (jQuery('#preloader').hasClass('isdone')) {
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.progress-wrap').addClass('active-progress');
+            } else {
+                jQuery('.progress-wrap').removeClass('active-progress');
+            }
         } else {
             jQuery('.progress-wrap').removeClass('active-progress');
         }
-    });
+    };
+    
+    // Wait for preloader to complete before enabling progress button
+    var checkPreloader = setInterval(function() {
+        if (jQuery('#preloader').hasClass('isdone')) {
+            clearInterval(checkPreloader);
+            // Small delay after preloader is done before showing progress button
+            setTimeout(function() {
+                jQuery(window).on('scroll', handleProgressButton);
+                handleProgressButton(); // Check initial scroll position
+            }, 100);
+        }
+    }, 100);
     jQuery('.progress-wrap').on('click', function (event) {
         event.preventDefault();
         jQuery('html, body').animate({ scrollTop: 0 }, duration);
