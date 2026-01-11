@@ -661,6 +661,17 @@ paceOptions = {
     eventLag: false
 };
 
+// Hide preloader after DOM is ready (don't wait for all images)
+// This improves performance on pages with many images
+$(document).ready(function() {
+    setTimeout(function() {
+        if (!$('#preloader').hasClass('isdone')) {
+            $('#preloader').addClass("isdone");
+            $('.loading-text').addClass("isdone");
+        }
+    }, 800); // Small delay for smooth transition
+});
+
 Pace.on('done', function () {
     $('#preloader').addClass("isdone");
     $('.loading-text').addClass("isdone");

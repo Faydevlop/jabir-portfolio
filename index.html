@@ -14,7 +14,7 @@
     <meta name="author" content="" />
 
     <!-- Title  -->
-    <title>Avo</title>
+    <title>Jabir Portfolio</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" />
@@ -40,17 +40,86 @@
 
     <!-- Custom Styles for Mobile Background -->
     <style>
-        @media (max-width: 300px) {
+        /* Mobile styles - move background left to show user photo better */
+        @media (max-width: 991px) {
             header.freelancer.bg-img[data-background="media/bg3.png"],
             header.freelancer.bg-img {
-                background-position: right center !important;
+                background-position: 60% center !important;
                 background-size: cover !important;
+            }
+        }
+        /* Hide search icon on mobile */
+        @media (max-width: 991px) {
+            .navbar .search {
+                display: none !important;
+            }
+        }
+        /* Make mobile menu slide in from the side */
+        @media (max-width: 991px) {
+            body.menu-open {
+                overflow: hidden;
+            }
+            .navbar .navbar-collapse {
+                position: fixed !important;
+                top: 0 !important;
+                right: -300px !important;
+                width: 280px !important;
+                height: 100vh !important;
+                max-height: none !important;
+                background: #11141b !important;
+                transition: right 0.3s ease-in-out !important;
+                z-index: 9999 !important;
+                padding: 60px 30px 30px !important;
+                overflow-y: auto !important;
+                box-shadow: -2px 0 15px rgba(0, 0, 0, 0.5) !important;
+                text-align: left !important;
+                pointer-events: auto !important;
+            }
+            .navbar .navbar-collapse.show {
+                right: 0 !important;
+            }
+            /* Close button for mobile menu */
+            .navbar .navbar-collapse .close-menu {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                z-index: 10000;
+                background: none;
+                border: none;
+                padding: 5px;
+                line-height: 1;
+                display: block;
+            }
+            .navbar .navbar-collapse:not(.show) .close-menu {
+                display: none;
+            }
+            .navbar .navbar-collapse .close-menu:hover {
+                color: #75dab4;
+            }
+        }
+        /* Hide cursor effect on mobile screens */
+        @media (max-width: 991px) {
+            .mouse-cursor,
+            .cursor-outer,
+            .cursor-inner {
+                display: none !important;
             }
         }
         /* Keep default for larger screens */
         @media (min-width: 992px) {
             header.freelancer.bg-img {
                 background-position: center center;
+            }
+            .navbar .navbar-collapse {
+                position: static !important;
+                width: auto !important;
+                height: auto !important;
+                right: auto !important;
+                padding: 0 !important;
+                box-shadow: none !important;
             }
         }
     </style>
@@ -87,8 +156,6 @@
 
     <!-- ==================== End cursor ==================== -->
 
-
-
     <!-- ==================== Start Navbar ==================== -->
 
     <nav class="navbar navbar-expand-lg">
@@ -106,6 +173,7 @@
 
             <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class="close-menu" type="button" aria-label="Close menu"><i class="fas fa-times"></i></button>
                 <ul class="navbar-nav ml-auto">
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -150,7 +218,7 @@
                     <div class="cont">
                         <h6 style="color: white;">Hello, I'm</h6>
                         <h1> JABIR</h1>
-                        <h4>architectural 3D visualizer</h4>
+                        <h4>3D ARCHITECTURAL AND<br>LIGHTING VISUALIZER</h4>
                         <div class="social-icon">
                             <a target="_blank" href="https://www.behance.net/jabirk2?fbclid=PAZnRzaAOBFydleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeP8so6myS3TCLiO3C8hlHcOzjlZCLXS-RHIWaSdh0lIn_rdS8vYnS8WC9azA_aem_gBzyoGQO8Jhqhh3ISir44A" class="icon">
                                 <i class="fab fa-behance"></i>
@@ -435,6 +503,41 @@
 
     <!-- custom scripts -->
     <script src="js/scripts.js"></script>
+
+    <!-- Mobile Menu Side Slide Script -->
+    <script>
+        $(document).ready(function() {
+            // Handle mobile menu slide from side
+            function setupMobileMenu() {
+                if (window.innerWidth <= 991) {
+                    $('#navbarSupportedContent').off('show.bs.collapse hide.bs.collapse');
+                    
+                    $('#navbarSupportedContent').on('show.bs.collapse', function () {
+                        $('body').addClass('menu-open');
+                    });
+                    
+                    $('#navbarSupportedContent').on('hide.bs.collapse', function () {
+                        $('body').removeClass('menu-open');
+                    });
+                    
+                    // Close menu when close button is clicked
+                    $('.close-menu').off('click').on('click', function(e) {
+                        e.stopPropagation();
+                        $('#navbarSupportedContent').collapse('hide');
+                    });
+                } else {
+                    $('body').removeClass('menu-open');
+                }
+            }
+            
+            setupMobileMenu();
+        });
+        
+        // Update on resize
+        $(window).on('resize', function() {
+            setupMobileMenu();
+        });
+    </script>
 
 </body>
 
