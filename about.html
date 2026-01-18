@@ -14,7 +14,7 @@
     <meta name="author" content="" />
 
     <!-- Title  -->
-    <title>Avo</title>
+    <title>About - Jabir Portfolio</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" />
@@ -37,10 +37,80 @@
     <!-- Core Style Css -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Custom Styles for Mobile Menu -->
+    <style>
+        /* Hide search icon on mobile */
+        @media (max-width: 991px) {
+            .navbar .search {
+                display: none !important;
+            }
+        }
+        /* Make mobile menu slide in from the side */
+        @media (max-width: 991px) {
+            body.menu-open {
+                overflow: hidden;
+            }
+            .navbar .navbar-collapse {
+                position: fixed !important;
+                top: 0 !important;
+                right: -300px !important;
+                width: 280px !important;
+                height: 100vh !important;
+                max-height: none !important;
+                background: #11141b !important;
+                transition: right 0.3s ease-in-out !important;
+                z-index: 9999 !important;
+                padding: 60px 30px 30px !important;
+                overflow-y: auto !important;
+                box-shadow: -2px 0 15px rgba(0, 0, 0, 0.5) !important;
+                text-align: left !important;
+                pointer-events: auto !important;
+            }
+            .navbar .navbar-collapse.show {
+                right: 0 !important;
+            }
+            /* Close button for mobile menu */
+            .navbar .navbar-collapse .close-menu {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                z-index: 10000;
+                background: none;
+                border: none;
+                padding: 5px;
+                line-height: 1;
+                display: block;
+            }
+            .navbar .navbar-collapse:not(.show) .close-menu {
+                display: none;
+            }
+            .navbar .navbar-collapse .close-menu:hover {
+                color: #75dab4;
+            }
+        }
+        /* Keep default for larger screens */
+        @media (min-width: 992px) {
+            .navbar .navbar-collapse {
+                position: static !important;
+                width: auto !important;
+                height: auto !important;
+                right: auto !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+            /* Hide close menu button on larger screens */
+            .navbar .navbar-collapse .close-menu {
+                display: none !important;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-
 
     <!-- ==================== Start Loading ==================== -->
 
@@ -89,6 +159,7 @@
 
             <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class="close-menu" type="button" aria-label="Close menu"><i class="fas fa-times"></i></button>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -100,6 +171,7 @@
                             <a class="dropdown-item" href="exterior.html">Exterior</a>
                             <a class="dropdown-item" href="interior.html">Interior</a>
                             <a class="dropdown-item" href="floor-plan.html">Floor Plan</a>
+                            <a class="dropdown-item" href="lighting-design.html">Lighting Design</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -122,17 +194,20 @@
     <!-- ==================== End Navbar ==================== -->
 
 
+    <!-- ==================== Start header ==================== -->
 
-    <!-- ==================== Start Slider ==================== -->
-
-    <header class="pages-header bg-img valign parallaxie" data-background="img/slid/1.jpg" data-overlay-dark="5">
+    <header class="works-header fixed-slider hfixd valign">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="cont text-center">
-                        <h1>About Us</h1>
-                        <div class="path">
-                            <a href="#0">Home</a><span>/</span><a href="#0" class="active">About Us</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-11 static">
+                    <div class="capt mt-50">
+                        <div class="parlx">
+                            <h2 class="custom-font"><span>About</span> Me.</h2>
+                            <p>Passionate 3D Architectural and Lighting Visualizer creating stunning visual experiences.</p>
+                        </div>
+
+                        <div class="bactxt custom-font valign">
+                            <span class="full-width">About</span>
                         </div>
                     </div>
                 </div>
@@ -140,551 +215,425 @@
         </div>
     </header>
 
-    <!-- ==================== End Slider ==================== -->
+    <!-- ==================== End header ==================== -->
 
 
+    <!-- ==================== Start main-content ==================== -->
 
-    <!-- ==================== Start Intro ==================== -->
+    <div class="main-content">
 
-    <section class="intro-section section-padding pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div class="htit sm-mb30">
-                        <h4>Who We Are ?</h4>
-                    </div>
-                </div>
-                <div class="col-lg-8 offset-lg-1 col-md-8">
-                    <div class="text">
-                        <p class="wow txt" data-splitting>We develop creative solutions for small and big brands alike, build authentic product
-                            identities and much more.Lorem ipsum dolor sit amet, consectetur adipiscing elit sit non
-                            facilisis vitae eu. Ultrices ut diam morbi risus dui, nec eget at lorem in id tristique
-                            in elementum leo nisi eleifend placerat magna lacus elementum ornare vehicula odio
-                            posuere quisque ultrices tempus cras id blandit maecenas in ornare quis dolor tempus
-                            risus vitae feugiat fames aliquet sed.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- ==================== Start About ==================== -->
 
-    <!-- ==================== End Intro ==================== -->
-
-
-
-    <!-- ==================== Start Services ==================== -->
-
-    <section class="services section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="item md-mb50 wow fadeInUp" data-wow-delay=".3s">
-                        <span class="icon pe-7s-gleam"></span>
-                        <h6>Digital Marketing</h6>
-                        <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item md-mb50 wow fadeInUp" data-wow-delay=".5s">
-                        <span class="icon pe-7s-phone"></span>
-                        <h6>Web & App Development</h6>
-                        <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item wow fadeInUp" data-wow-delay=".7s">
-                        <span class="icon pe-7s-magic-wand"></span>
-                        <h6>Graphic Design</h6>
-                        <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End Services ==================== -->
-
-
-
-    <!-- ==================== Start block-sec ==================== -->
-
-    <section class="block-sec">
-        <div class="background bg-img section-padding pb-0" data-background="img/slid/1.jpg" data-overlay-dark="8">
+        <section class="contact section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="vid-area">
-                            <div class="vid-icon">
-                                <a class="vid" href="https://vimeo.com/127203262">
-                                    <div class="vid-butn">
-                                        <span class="icon">
-                                            <i class="fas fa-play"></i>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="cont">
-                                <h3 class="wow" data-splitting>So that's us. There's no other way to put it.</h3>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-5 offset-lg-1">
-                        <div class="testim-box">
-                            <div class="head-box">
-                                <h6 class="wow fadeIn" data-wow-delay=".5s">Our Happy Clients</h6>
-                                <h4 class="wow fadeInLeft" data-wow-delay=".5s">What Client's Say?</h4>
+                        <div class="cont-info">
+                            <h4 class="extra-title mb-50">About Me.</h4>
+                            <h3 class="custom-font wow" data-splitting>Hello, I'm Jabir.
+                            </h3>
+                            <div class="item mb-40">
+                                <p>I'm a passionate 3D Architectural and Lighting Visualizer dedicated to bringing architectural visions to life through stunning photorealistic renders. With expertise in both exterior and interior visualization, floor plans, and specialized lighting design, I transform concepts into compelling visual stories.</p>
+                                <p>My work focuses on creating immersive visual experiences that help architects, designers, and clients visualize their projects before they're built. Every project is an opportunity to blend technical precision with artistic vision.</p>
                             </div>
-                            <div class="slic-item wow fadeInUp" data-wow-delay=".5s">
-                                <div class="item">
-                                    <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit
-                                        class
-                                        aptent taciti sociosqu ad litora.</p>
-                                    <div class="info">
-                                        <div class="img">
-                                            <div class="img-box">
-                                                <img src="img/clients/1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="cont">
-                                            <div class="author">
-                                                <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                <span class="author-details">Co-founder, Colabrio</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit
-                                        class
-                                        aptent taciti sociosqu ad litora.</p>
-                                    <div class="info">
-                                        <div class="img">
-                                            <div class="img-box">
-                                                <img src="img/clients/2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="cont">
-                                            <div class="author">
-                                                <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                <span class="author-details">Co-founder, Colabrio</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit
-                                        class
-                                        aptent taciti sociosqu ad litora.</p>
-                                    <div class="info">
-                                        <div class="img">
-                                            <div class="img-box">
-                                                <img src="img/clients/3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="cont">
-                                            <div class="author">
-                                                <h6 class="author-name custom-font">Alex Regelman</h6>
-                                                <span class="author-details">Co-founder, Colabrio</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End block-sec ==================== -->
-
-
-
-    <!-- ==================== Start Skills Circle ==================== -->
-
-    <section class="skills-circle sub-bg pt-50 pb-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="item wow fadeInLeft" data-wow-delay=".6">
-                                    <div class="skill" data-value="0.9">
-                                        <span class="custom-font">90%</span>
-                                    </div>
-                                    <div class="cont">
-                                        <span>Project</span>
-                                        <h6>Consulting</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="item wow fadeInLeft" data-wow-delay=".3">
-                                    <div class="skill" data-value="0.75">
-                                        <span class="custom-font">75%</span>
-                                    </div>
-                                    <div class="cont">
-                                        <span>App</span>
-                                        <h6>Development</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End Skills Circle ==================== -->
-
-
-
-    <!-- ==================== Start Team ==================== -->
-
-    <section class="team section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 valign">
-                    <div class="full-width">
-                        <div class="sec-head custom-font mb-0">
-                            <h6>Employees</h6>
-                            <h3>Our Team.</h3>
-                        </div>
-                        <div class="navs mt-30 wow fadeInUp" data-wow-delay=".3s">
-                            <span class="prev cursor-pointer">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="next cursor-pointer">
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="team-container">
-                        <div class="item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="img wow imago">
-                                <img src="img/team/01.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>Hasib sharif</h5>
-                                <span>General Manager</span>
-                                <div class="social">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="img wow imago">
-                                <img src="img/team/02.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>Jonson Leo</h5>
-                                <span>Founder</span>
-                                <div class="social">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="img wow imago">
-                                <img src="img/team/03.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>Leio Man</h5>
-                                <span>Founder</span>
-                                <div class="social">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="img wow imago">
-                                <img src="img/team/4.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>Robert Front</h5>
-                                <span>CEO Founder</span>
-                                <div class="social">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="img wow imago">
-                                <img src="img/team/5.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>Legender Mao</h5>
-                                <span>3D Visualization</span>
-                                <div class="social">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item wow fadeInUp" data-wow-delay=".3s">
-                            <div class="img wow imago">
-                                <img src="img/team/6.jpg" alt="">
-                            </div>
-                            <div class="info">
-                                <h5>Matt Huk</h5>
-                                <span>3D Visualization</span>
-                                <div class="social">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End Team ==================== -->
-
-
-
-    <!-- ==================== Start Minimal-Area ==================== -->
-
-    <section class="min-area sub-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="img">
-                        <img class="thumparallax-down" src="img/min-area.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 valign">
-                    <div class="content">
-                        <h4 class="wow custom-font" data-splitting>About us.</h4>
-                        <p class="wow txt" data-splitting>Our creative Ad agency is ranked among the finest in
-                            the US. We cultivate smart ideas for start-ups and seasoned players.
-                        </p>
-                        <ul class="feat">
-                            <li class="wow fadeInUp" data-wow-delay=".2s">
-                                <h6><span>1</span> Our Mission</h6>
-                                <p>luctus massa ipsum at tempus eleifend congue lectus bibendum</p>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay=".4s">
-                                <h6><span>2</span> Our Goals</h6>
-                                <p>luctus massa ipsum at tempus eleifend congue lectus bibendum</p>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay=".6s">
-                                <h6><span>3</span> Why Us? </h6>
-                                <p>luctus massa ipsum at tempus eleifend congue lectus bibendum</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End Minimal-Area ==================== -->
-
-
-
-    <!-- ==================== Start clients Brands ==================== -->
-
-    <section class="clients section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 valign">
-                    <div class="sec-head custom-font mb-0">
-                        <h6>Clients</h6>
-                        <h3>Our <br> Clients.</h3>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div>
-                        <div class="row bord">
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".3s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/01.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".6s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/02.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".8s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/03.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".3s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/04.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".4s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/05.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".7s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/06.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".5s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/07.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 brands">
-                                <div class="item wow fadeIn" data-wow-delay=".3s">
-                                    <div class="img">
-                                        <img src="img/clients/brands/08.png" alt="">
-                                        <a href="#0" class="link" data-splitting>www.avo.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End clients Brands ==================== -->
-
-
-
-    <!-- ==================== Start call-to-action ==================== -->
-
-    <section class="call-action section-padding sub-bg bg-img" data-background="img/pattern.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-9">
-                    <div class="content sm-mb30">
-                        <h6 class="wow" data-splitting>Let’s Talk</h6>
-                        <h2 class="wow custom-font" data-splitting>about your <b>next project</b>.</h2>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3 valign">
-                    <a href="contact.html" class="btn-curve btn-lit"><span>Get In Touch</span></a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== End call-to-action ==================== -->
-
-
-
-    <!-- ==================== Start Footer ==================== -->
-
-    <footer class="footer-half sub-bg section-padding pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="cont">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="media/LOGO.png" alt="" style="width: 150px; height: auto;">
-                            </a>
-                        </div>
-                        <div class="con-info custom-font">
-                            <ul>
-                                <li><span>Email : </span> jabir.archviz@gmail.com</li>
-                                <li><span>Address : </span> A32 , Ave 15th Street, Door 211, San Franciso, USA
-                                    32490.
-                                </li>
-                                <li><span>Phone : </span> +91 96051 24853</li>
-                            </ul>
-                        </div>
-                        <div class="social-icon">
-                            <h6 class="custom-font stit simple-btn">Follow Us</h6>
-                            <div class="social">
-                                <a href="#0" class="icon">
+                            <div class="social mt-50">
+                                <a target="_blank" href="https://www.behance.net/jabirk2?fbclid=PAZnRzaAOBFydleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeP8so6myS3TCLiO3C8hlHcOzjlZCLXS-RHIWaSdh0lIn_rdS8vYnS8WC9azA_aem_gBzyoGQO8Jhqhh3ISir44A" class="icon">
                                     <i class="fab fa-behance"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 offset-lg-2">
-                    <div class="subscribe mb-50">
-                        <h6 class="custom-font stit simple-btn">Newslatter</h6>
-                        <p>Sign up for subscribe out newsletter!</p>
-                        <form>
-                            <div class="form-group custom-font">
-                                <input type="email" name="subscribe" placeholder="Your Email">
-                                <button class="cursor-pointer">Subscribe</button>
+            </div>
+        </section>
+
+        <!-- ==================== End About ==================== -->
+
+
+        <!-- ==================== Start Work Experience ==================== -->
+
+        <section class="section-padding sub-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="mb-80">
+                            <h4 class="extra-title mb-30" style="display: flex; align-items: center; gap: 15px;">
+                                <i class="fas fa-briefcase" style="font-size: 24px;"></i>
+                                <span>WORK EXPERIENCES</span>
+                                <span style="flex: 1; height: 1px; background: rgba(255,255,255,0.1); margin-left: 20px;"></span>
+                            </h4>
+                            
+                            <div class="timeline-wrapper" style="position: relative; padding-left: 30px;">
+                                <!-- Timeline line -->
+                                <div style="position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: #333;"></div>
+                                
+                                <!-- Work Experience 1 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #11141b;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">march 2023 - january 2026 till</h5>
+                                        <h4 style="font-weight: 600; margin-bottom: 5px;">LIGHTING TECHNOLOGIES INDIA PVT LTD</h4>
+                                        <h6 style="font-weight: 500; margin-bottom: 15px; color: #aaa;">Deputy Manager <span style="color: #666;">(banglore karnataka)</span></h6>
+                                        <ul style="list-style: none; padding: 0; margin: 0;">
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Assist in managing design projects from inception to completion, ensuring they meet quality standards and deadlines.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Supervise and support the design team, facilitating collaboration, assigning tasks, and providing feedback.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Stay updated on industry trends and software advancements, ensuring the studio utilizes the best tools and techniques.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Work Experience 2 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #11141b;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">june 2021-march 2023</h5>
+                                        <h4 style="font-weight: 600; margin-bottom: 5px;">ILMORH ILLUSIONS</h4>
+                                        <h6 style="font-weight: 500; margin-bottom: 15px; color: #aaa;">senior Architectural 3D Visualier <span style="color: #666;">(kochi kerala)</span></h6>
+                                        <ul style="list-style: none; padding: 0; margin: 0;">
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Create detailed 3D models and realistic renderings using advanced software, ensuring accuracy in materials, lighting, and textures.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Collaborate with architects, designers, and clients to understand project - requirements and develop compelling visual concepts.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Work Experience 3 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #11141b;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">July 2019 - march 2021</h5>
+                                        <h4 style="font-weight: 600; margin-bottom: 5px;">ESSAR BUILDERS</h4>
+                                        <h6 style="font-weight: 500; margin-bottom: 15px; color: #aaa;">3D Architectural and Interior Visualizer <span style="color: #666;">(Kochi kerala)</span></h6>
+                                        <ul style="list-style: none; padding: 0; margin: 0;">
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Develop detailed 3D models based on sketches, blueprints, or design - specifications.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Apply textures, colors, and materials to 3D models to enhance realism.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Produce high-quality images or animations.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Work Experience 4 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #11141b;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">May 2017 - July 2019</h5>
+                                        <h4 style="font-weight: 600; margin-bottom: 5px;">Anexim Engineering Consultants Pvt LTD</h4>
+                                        <h6 style="font-weight: 500; margin-bottom: 15px; color: #aaa;">3D visualizer <span style="color: #666;">(melattur kerala)</span></h6>
+                                        <ul style="list-style: none; padding: 0; margin: 0;">
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                create basic 3D models and textures, supports rendering tasks, and makes- adjustments based on feedback.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Assist in rendering images and animations under supervision.
+                                            </li>
+                                            <li style="padding-left: 20px; margin-bottom: 10px; position: relative;">
+                                                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #75dab4; border-radius: 50%;"></span>
+                                                Produce high-quality images or animations.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="insta">
-                        <h6 class="custom-font stit simple-btn">Instagram Post</h6>
-                        <div class="insta-gallary">
-                            <a href="#0">
-                                <img src="img/insta/1.jpg" alt="">
-                            </a>
-                            <a href="#0">
-                                <img src="img/insta/2.jpg" alt="">
-                            </a>
-                            <a href="#0">
-                                <img src="img/insta/3.jpg" alt="">
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- ==================== End Footer ==================== -->
+        <!-- ==================== End Work Experience ==================== -->
 
 
+        <!-- ==================== Start Education ==================== -->
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="mb-80">
+                            <h4 class="extra-title mb-30" style="display: flex; align-items: center; gap: 15px;">
+                                <i class="fas fa-graduation-cap" style="font-size: 24px;"></i>
+                                <span>EDUCATION</span>
+                                <span style="flex: 1; height: 1px; background: rgba(255,255,255,0.1); margin-left: 20px;"></span>
+                            </h4>
+                            
+                            <div class="timeline-wrapper" style="position: relative; padding-left: 30px;">
+                                <!-- Timeline line -->
+                                <div style="position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: #333;"></div>
+                                
+                                <!-- Education 1 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #0c0f16;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">2015-2018</h5>
+                                        <h6 style="font-weight: 400; color: #eee;">B.COM COMPUTER APPLICATION, BHARATHIAR UNIVERSITY, Coimbatore.</h6>
+                                    </div>
+                                </div>
+
+                                <!-- Education 2 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #0c0f16;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">2015-2017</h5>
+                                        <h6 style="font-weight: 400; color: #eee;">DIPLOMA IN COMPUTER AIDED CIVIL ENGINEERING (DCACE), TCIL-IT (GOVT OF INDIA ENTERPRISE UNDER MINISTRY OF COMMN & IT) India.</h6>
+                                    </div>
+                                </div>
+
+                                <!-- Education 3 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #0c0f16;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">2017</h5>
+                                        <h6 style="font-weight: 400; color: #eee;">DIPLOM IN COMPUTERISED INTERIOR DESIGN (DCID).</h6>
+                                    </div>
+                                </div>
+
+                                <!-- Education 4 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #0c0f16;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">2013-2015</h5>
+                                        <h6 style="font-weight: 400; color: #eee;">Higher Secondary Education, Board of Higher Secondary Govt. of Kerala.</h6>
+                                    </div>
+                                </div>
+
+                                <!-- Education 5 -->
+                                <div class="timeline-item mb-50" style="position: relative; padding-left: 40px;">
+                                    <div style="position: absolute; left: 3px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: #75dab4; border: 3px solid #0c0f16;"></div>
+                                    <div>
+                                        <h5 style="font-weight: 600; margin-bottom: 8px; color: #75dab4;">2012-2013</h5>
+                                        <h6 style="font-weight: 400; color: #eee;">High school Education (S.S.L.C), Board of Public examination - Kerala.</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End Education ==================== -->
+
+
+        <!-- ==================== Start Skills ==================== -->
+
+        <section class="section-padding sub-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="mb-80">
+                            <h4 class="extra-title mb-30" style="display: flex; align-items: center; gap: 15px;">
+                                <i class="fas fa-laptop-code" style="font-size: 24px;"></i>
+                                <span>SOFTWARE SKILLS</span>
+                                <span style="flex: 1; height: 1px; background: rgba(255,255,255,0.1); margin-left: 20px;"></span>
+                            </h4>
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="skills-box">
+                                        <!-- 3Ds MAX -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-cube" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">3Ds MAX</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="90%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Lumion -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-image" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Lumion</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="90%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- V-Ray -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-sun" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">V-Ray</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="90%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Corona Render -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-circle" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Corona Render</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="30%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- DaVinci Resolve -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-video" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">DaVinci Resolve</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="20%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="skills-box">
+                                        <!-- AutoCAD -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-drafting-compass" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">AutoCAD</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="50%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SketchUp -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-draw-polygon" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">SketchUp</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="30%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Adobe Photoshop -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-paint-brush" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Adobe Photoshop</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="50%"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Adobe After Effects -->
+                                        <div class="skill-item">
+                                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <i class="fas fa-film" style="font-size: 24px; color: #75dab4; margin-right: 15px;"></i>
+                                                <h6 style="margin: 0; font-size: 13px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Adobe After Effects</h6>
+                                            </div>
+                                            <div class="skill-progress">
+                                                <div class="progres" data-value="20%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End Skills ==================== -->
+
+
+        <!-- ==================== Start Specialization ==================== -->
+
+        <section class="services section-padding">
+            <div class="container">
+                <div class="sec-head custom-font text-center">
+                    <h6 class="wow fadeIn" data-wow-delay=".5s">What I Do</h6>
+                    <h3 class="wow" data-splitting>Specialization.</h3>
+                    <span class="tbg">Specialization</span>
+                </div>
+                <div class="row" style="margin: 0 -15px;">
+                    <div class="col-lg-4 col-md-6" style="padding: 0 15px; margin-bottom: 30px;">
+                        <div class="item wow fadeInUp" data-wow-delay=".3s">
+                            <span class="icon pe-7s-home"></span>
+                            <h6>Architectural Specialization</h6>
+                            <p>Expertise in creating detailed architectural visualizations and 3D models with precision and accuracy.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="padding: 0 15px; margin-bottom: 30px;">
+                        <div class="item wow fadeInUp" data-wow-delay=".5s">
+                            <span class="icon pe-7s-display2"></span>
+                            <h6>Architectural Visualization</h6>
+                            <p>Transforming architectural designs into photorealistic 3D visualizations that bring concepts to life.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" style="padding: 0 15px; margin-bottom: 30px;">
+                        <div class="item wow fadeInUp" data-wow-delay=".7s">
+                            <span class="icon pe-7s-look"></span>
+                            <h6>Interior Visualization</h6>
+                            <p>Creating stunning interior renders with accurate lighting, materials, and spatial design representation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style="padding: 0 15px; margin-bottom: 30px;">
+                        <div class="item wow fadeInUp" data-wow-delay=".4s">
+                            <span class="icon pe-7s-light"></span>
+                            <h6>Architectural Lighting Visualization</h6>
+                            <p>Specialized in lighting design visualization, showcasing how light interacts with architectural spaces.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6" style="padding: 0 15px; margin-bottom: 30px;">
+                        <div class="item wow fadeInUp" data-wow-delay=".6s">
+                            <span class="icon pe-7s-box2"></span>
+                            <h6>Product Rendering</h6>
+                            <p>High-quality product renders with detailed materials, lighting, and professional presentation quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End Specialization ==================== -->
+
+
+        <!-- ==================== Start Footer ==================== -->
+
+        <footer class="footer-half sub-bg">
+            <div class="container">
+            </div>
+        </footer>
+
+        <!-- ==================== End Footer ==================== -->
+
+
+    </div>
+
+    <!-- ==================== End main-content ==================== -->
 
 
 
@@ -699,10 +648,44 @@
     <!-- custom scripts -->
     <script src="js/scripts.js"></script>
 
+    <!-- Mobile Menu Side Slide Script -->
+    <script>
+        $(document).ready(function() {
+            // Handle mobile menu slide from side
+            function setupMobileMenu() {
+                if (window.innerWidth <= 991) {
+                    $('#navbarSupportedContent').off('show.bs.collapse hide.bs.collapse');
+                    
+                    $('#navbarSupportedContent').on('show.bs.collapse', function () {
+                        $('body').addClass('menu-open');
+                    });
+                    
+                    $('#navbarSupportedContent').on('hide.bs.collapse', function () {
+                        $('body').removeClass('menu-open');
+                    });
+                    
+                    // Close menu when close button is clicked
+                    $('.close-menu').off('click').on('click', function(e) {
+                        e.stopPropagation();
+                        $('#navbarSupportedContent').collapse('hide');
+                    });
+                } else {
+                    $('body').removeClass('menu-open');
+                }
+            }
+            
+            setupMobileMenu();
+        });
+        
+        // Update on resize
+        $(window).on('resize', function() {
+            setupMobileMenu();
+        });
+    </script>
+
 </body>
 
 
 <!-- Mirrored from uithemez.com/i/avo/avo-dark/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Nov 2025 15:42:50 GMT -->
 </html>
-
 
